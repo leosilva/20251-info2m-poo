@@ -1,0 +1,9 @@
+ERROR:__main__:Erro de divisão por zero: division by zero
+ERROR:__main__:Erro de valor: invalid literal for int() with base 10: '/usr/local/bin/python3 /Users/leosilva/Documents/Ensino/Disciplinas/2025.1/POO_Python/exemplos_python/excecoes/exemplo1.py'
+ERROR:__main__:Erro de valor: invalid literal for int() with base 10: 'dois'
+ERROR:__main__:Erro de valor: invalid literal for int() with base 10: '/usr/local/bin/python3 /Users/leosilva/Documents/Ensino/Disciplinas/2025.1/POO_Python/exemplos_python/excecoes/exemplo1.py'
+ERROR:__main__:Erro de divisão por zero: division by zero
+ERROR:__main__:Erro de valor: invalid literal for int() with base 10: '/usr/local/bin/python3 /Users/leosilva/Documents/Ensino/Disciplinas/2025.1/POO_Python/exemplos_python/calculadora_excecoes/teste.py'
+ERROR:__main__:Erro de entrada inválida: invalid literal for int() with base 10: '*'
+ERROR:__main__:Erro de divisão por zero: 
+ERROR:__main__:Erro de entrada inválida: invalid literal for int() with base 10: 'dois'

@@ -1,0 +1,2 @@
+ERROR:__main__:Erro de entrada inválida: invalid literal for int() with base 10: 'cinco'
+ERROR:__main__:Erro de entrada inválida: Operação inválida.
