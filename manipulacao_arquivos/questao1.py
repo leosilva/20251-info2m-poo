@@ -1,7 +1,7 @@
 def escrever_arquivo():
     texto = input("digite alguma coisa: ")
-    arquivo = open("manipulacao_arquivos/questao_1.txt", "w")
-    arquivo.write(texto)
+    arquivo = open("manipulacao_arquivos/questao_1.txt", "a")
+    arquivo.write(texto + "\n")
     arquivo.close()
 
 def ler_arquivo():

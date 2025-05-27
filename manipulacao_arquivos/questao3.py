@@ -3,9 +3,8 @@ def copiar_conteudo():
     arquivo_destino = open("manipulacao_arquivos/questao3.txt", "w")
 
     linhas_arquivo = arquivo.readlines()
-    for linha in linhas_arquivo:
-        arquivo_destino.write(linha)
-
+    arquivo_destino.writelines(linhas_arquivo)
+    
     arquivo.close()
     arquivo_destino.close()
 
