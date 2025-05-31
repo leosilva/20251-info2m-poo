@@ -1,11 +1,15 @@
 import tkinter as tk
 
 janela = tk.Tk()
-janela.title("Exemplo com Entry")
-janela.geometry("400x300")
+janela.geometry("300x200")
 
-# Criar o campo de entrada
-entrada = tk.Entry(janela)
-entrada.pack()
+rotulo = tk.Label(
+    janela,
+    text="Mensagem personalizada",
+    font=("Helvetica", 16, "italic"),
+    fg="white",
+    bg="darkblue"
+)
 
+rotulo.pack()
 janela.mainloop()
