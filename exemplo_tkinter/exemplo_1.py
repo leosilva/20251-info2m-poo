@@ -10,6 +10,7 @@ def exibir_texto():
     texto_digitado = entrada.get()
     label_resultado.config(text=f"Olá, {texto_digitado}")
 
+
 janela = tk.Tk()
 janela.title("Minha Primeira Janela")
 
