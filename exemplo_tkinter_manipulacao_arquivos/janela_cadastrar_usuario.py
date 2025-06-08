@@ -3,44 +3,44 @@ import manipulador_arquivos as ma
 import utils as ut
 
 
-def limpar_campos():
-    entrada_usuario.delete(0 ,'end')
-    entrada_email.delete(0 ,'end')
-    entrada_senha.delete(0 ,'end')
+class JanelaCadastroUsuario:
+    def __init__(self, janela):        
+        self.frame = tk.Frame(janela, width=420, height=300)
+        self.frame.grid(row=1, column=0, padx=10, pady=10)
+
+        label_nome = tk.Label(self.frame, text="Nome: ")
+        label_nome.pack(pady=5)
+
+        self.entrada_usuario = tk.Entry(self.frame)
+        self.entrada_usuario.pack(pady=5)
+        self.entrada_usuario.focus()
+
+        label_email = tk.Label(self.frame, text="Email: ")
+        label_email.pack(pady=5)
+
+        self.entrada_email = tk.Entry(self.frame)
+        self.entrada_email.pack(pady=5)
+
+        label_senha = tk.Label(self.frame, text="Senha: ")
+        label_senha.pack(pady=5)
+
+        self.entrada_senha = tk.Entry(self.frame, show="*")
+        self.entrada_senha.pack(pady=5)
+
+        botao = tk.Button(self.frame, text="Salvar", command=self.cadastrar_usuario)
+        botao.pack(pady=5)
 
 
-def cadastrar_usuario():
-    nome = entrada_usuario.get()
-    email = entrada_email.get()
-    senha = entrada_senha.get()
-    resultado = ma.adicionar_usuario(nome, email, senha)
-    ut.exibir_mensagem(resultado, "Usuário adiconado com sucesso!", "Erro ao adicionar usuário.")
-    limpar_campos()
-    
+    def limpar_campos(self):
+        self.entrada_usuario.delete(0 ,'end')
+        self.entrada_email.delete(0 ,'end')
+        self.entrada_senha.delete(0 ,'end')
 
-janela = tk.Tk()
-janela.title("Cadastro de Usuário")
-janela.geometry("400x260")
 
-label_nome = tk.Label(janela, text="Nome: ")
-label_nome.pack(pady=5)
-
-entrada_usuario = tk.Entry(janela)
-entrada_usuario.pack(pady=5)
-
-label_email = tk.Label(janela, text="Email: ")
-label_email.pack(pady=5)
-
-entrada_email = tk.Entry(janela)
-entrada_email.pack(pady=5)
-
-label_senha = tk.Label(janela, text="Senha: ")
-label_senha.pack(pady=5)
-
-entrada_senha = tk.Entry(janela, show="*")
-entrada_senha.pack(pady=5)
-
-botao = tk.Button(janela, text="Salvar", command=cadastrar_usuario)
-botao.pack(pady=5)
-
-janela.mainloop()
+    def cadastrar_usuario(self):
+        nome = self.entrada_usuario.get()
+        email = self.entrada_email.get()
+        senha = self.entrada_senha.get()
+        resultado = ma.adicionar_usuario(nome, email, senha)
+        ut.exibir_mensagem(resultado, "Usuário adiconado com sucesso!", "Erro ao adicionar usuário.")
+        self.limpar_campos()
