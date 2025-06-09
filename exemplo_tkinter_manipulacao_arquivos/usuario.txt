@@ -2,3 +2,4 @@ joao;joao@gmail.com;123456
 caio;caio@gmail.com;654321
 maria;maria@gmail.com;987654
 julia;julia@gmail.com;123987
+davi;davi@davi.com;123

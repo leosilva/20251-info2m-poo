@@ -5,26 +5,33 @@ from janela_atualizar_usuario import JanelaAtualizarUsuario
 from janela_remover_usuario import JanelaRemoverUsuario
 
 
+"""
+Janela principal. Contém botões para as quatro funcionalidades.
+"""
 class JanelaPrincipal:
     def __init__(self):
         self.janela = tk.Tk()
         self.janela.title("Sistema de Cadastro de Usuário")
         self.centralizar_janela()
 
+        """
+        Cria um frame para os botões e o coloca na posicao 0,0 da tabela.
+        """
         frame_botoes = tk.Frame(self.janela, width=420, height=50)
         frame_botoes.grid(row=0, column=0, padx=10, pady=10)
 
-        botao = tk.Button(frame_botoes, text="Cadastrar", command=self.abrir_janela_cadastro)
-        botao.pack(padx=5, side='left')
+        botao_cadastro = tk.Button(frame_botoes, text="Cadastrar", command=self.abrir_janela_cadastro)
+        # O side='left' faz com que o botao seja alinhado a esquerda
+        botao_cadastro.pack(padx=5, side='left')
 
-        botao = tk.Button(frame_botoes, text="Buscar", command=self.abrir_janela_busca)
-        botao.pack(padx=5, side='left')
+        botao_busca = tk.Button(frame_botoes, text="Buscar", command=self.abrir_janela_busca)
+        botao_busca.pack(padx=5, side='left')
 
-        botao = tk.Button(frame_botoes, text="Atualizar", command=self.abrir_janela_atualizacao)
-        botao.pack(padx=5, side='left')
+        botao_atualizar = tk.Button(frame_botoes, text="Atualizar", command=self.abrir_janela_atualizacao)
+        botao_atualizar.pack(padx=5, side='left')
 
-        botao = tk.Button(frame_botoes, text="Remover", command=self.abrir_janela_remocao)
-        botao.pack(padx=5, side='left')
+        botao_remover = tk.Button(frame_botoes, text="Remover", command=self.abrir_janela_remocao)
+        botao_remover.pack(padx=5, side='left')
 
         self.janela.mainloop()
 
@@ -41,8 +48,15 @@ class JanelaPrincipal:
         self.janela.geometry(f"{largura}x{altura}+{x}+{y}")
 
 
+    """
+    Função para remover o frame da janela principal.
+    A cada vez que o usuário clica em um botão para abrir uma
+    funcionalidade, o frame da funcionalidade anterior é apagado.
+    """
     def limpar_widgets(self):
+        # se houver mais de um widget filho da janela principal, então há um frame criado
         if len(self.janela.winfo_children()) > 1:
+            # remove o frame criado
             self.janela.winfo_children()[1].destroy()
 
 
