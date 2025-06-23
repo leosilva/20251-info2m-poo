@@ -1,6 +1,3 @@
-import manipulacao_arquivos.manipulador_arquivos_editora as mae
-
-
 class Livro:
     def __init__(self, titulo, autor, isbn, editora_id, id=None):
         self.titulo = titulo
@@ -9,7 +6,6 @@ class Livro:
         self.editora_id = editora_id
         self.id = id
                 
-        
         
     def to_dict(self):
         return {

@@ -21,6 +21,13 @@ def carregar_editoras():
         f = open(CAMINHO_ARQUIVO, "r")
         editoras = json.load(f)
         for e in editoras:
+            """
+            {
+                "id": 2,
+                "nome": "Bookman",
+                "pais": "Brasil"
+            }
+            """
             obj_editora = Editora(**e)
             lista_editoras.append(obj_editora)
         return lista_editoras

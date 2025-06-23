@@ -1,5 +1,3 @@
-import manipulacao_arquivos.manipulador_arquivos_livro as mal
-
 class Editora:
     def __init__(self, nome, pais, id=None):
         self.nome = nome

@@ -13,5 +13,10 @@
         "id": 3,
         "nome": "Novatec",
         "pais": "Brasil"
+    },
+    {
+        "id": 4,
+        "nome": "Editora Teste",
+        "pais": "Brasil"
     }
 ]

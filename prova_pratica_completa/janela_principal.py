@@ -12,9 +12,11 @@ class JanelaPrincipal:
         self.janela.title("Sistema de Cadastro de Livros")
         self.centralizar_janela()
 
+        # barra de menu
         self.menu_bar = tk.Menu(self.janela)
         self.janela.config(menu=self.menu_bar)
 
+        # itens de menu
         menu_livros = tk.Menu(self.menu_bar, tearoff=0)
         self.menu_bar.add_cascade(label="Livros", menu=menu_livros)
         menu_livros.add_command(label="Cadastrar Livro", command=self.abrir_janela_cadastro)
@@ -52,13 +54,13 @@ class JanelaPrincipal:
         self.limpar_widgets()
         JanelaBuscaLivro(self.janela)
 
-    def abrir_janela_atualizacao(self):
-        self.limpar_widgets()
-        JanelaAtualizarLivro(self.janela)
+    # def abrir_janela_atualizacao(self):
+    #     self.limpar_widgets()
+    #     JanelaAtualizarLivro(self.janela)
 
-    def abrir_janela_remocao(self):
-        self.limpar_widgets()
-        JanelaRemoverLivro(self.janela)
+    # def abrir_janela_remocao(self):
+    #     self.limpar_widgets()
+    #     JanelaRemoverLivro(self.janela)
         
     def abrir_janela_cadastro_editora(self):
         self.limpar_widgets()
