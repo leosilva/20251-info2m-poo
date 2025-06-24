@@ -1,0 +1,16 @@
+[
+    {
+        "id": 3,
+        "titulo": "Livro C",
+        "autor": "Autor A",
+        "isbn": "9879876",
+        "editora_id": 3
+    },
+    {
+        "id": 4,
+        "titulo": "Livro Z",
+        "autor": "Autor Z",
+        "isbn": "87268756",
+        "editora_id": 4
+    }
+]
