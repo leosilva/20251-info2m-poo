@@ -1,8 +1,7 @@
 import tkinter as tk
 
-def novo_arquivo(event=None):
+def novo_arquivo(event = None):
     print("Novo arquivo criado!")
-
 
 janela = tk.Tk()
 janela.title("Aceleradores")
