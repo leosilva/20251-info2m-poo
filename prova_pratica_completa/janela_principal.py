@@ -1,8 +1,7 @@
 import tkinter as tk
 from janelas.livro.janela_cadastrar_livro import JanelaCadastroLivro
 from janelas.livro.janela_buscar_livro import JanelaBuscaLivro
-from janelas.livro.janela_atualizar_livro import JanelaAtualizarLivro
-from janelas.livro.janela_remover_livro import JanelaRemoverLivro
+from janelas.editora.janela_buscar_editora import JanelaBuscaEditora
 from janelas.editora.janela_cadastrar_editora import JanelaCadastroEditora
 
 
@@ -20,7 +19,7 @@ class JanelaPrincipal:
         menu_livros = tk.Menu(self.menu_bar, tearoff=0)
         self.menu_bar.add_cascade(label="Livros", menu=menu_livros)
         menu_livros.add_command(label="Cadastrar Livro", command=self.abrir_janela_cadastro)
-        menu_livros.add_command(label="Buscar Livro", command=self.abrir_janela_busca)
+        menu_livros.add_command(label="Buscar Livro", command=self.abrir_janela_busca_livro)
         
         menu_livros.add_separator()
         menu_livros.add_command(label="Sair", command=self.janela.quit)
@@ -28,6 +27,7 @@ class JanelaPrincipal:
         menu_editoras = tk.Menu(self.menu_bar, tearoff=0)
         self.menu_bar.add_cascade(label="Editoras", menu=menu_editoras)
         menu_editoras.add_command(label="Cadastrar Editora", command=self.abrir_janela_cadastro_editora)
+        menu_editoras.add_command(label="Buscar Editora", command=self.abrir_janela_busca_editora)
 
         self.janela.mainloop()
 
@@ -50,9 +50,13 @@ class JanelaPrincipal:
         self.limpar_widgets()
         JanelaCadastroLivro(self.janela)
 
-    def abrir_janela_busca(self):
+    def abrir_janela_busca_livro(self):
         self.limpar_widgets()
         JanelaBuscaLivro(self.janela)
+        
+    def abrir_janela_busca_editora(self):
+        self.limpar_widgets()
+        JanelaBuscaEditora(self.janela)
 
     # def abrir_janela_atualizacao(self):
     #     self.limpar_widgets()

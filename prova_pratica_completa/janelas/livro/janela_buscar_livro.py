@@ -106,7 +106,7 @@ class JanelaBuscaLivro:
         tem_ctz = messagebox.askyesno("Tem certeza?", "Tem certeza de que deseja remover este livro?")
         
         if tem_ctz:
-            # manda remover o livro, passando o titulo como parametro
+            # manda remover o livro, passando o id como parametro
             resultado = mal.remover_livro(self.livro_buscado.id)
             
             # exibe mensagem de sucesso ou falha

@@ -74,12 +74,38 @@ def adicionar_editora(editora):
     
     
 def buscar_editora_por_nome(nome):
-    pass
+    try:
+        editoras = carregar_editoras()
+        for editora in editoras:
+            if editora.nome == nome:        
+                # se achou uma editora com o nome, retorna a linha completa da editora
+                return editora
+    except:
+        # deveria adicionar um arquivo de log para armazenar o erro
+        return None
         
         
 def atualizar_editora(editora):
-    pass
+    try:
+        editoras = carregar_editoras()
+        for idx, e in enumerate(editoras):
+            if e.id == editora.id:
+                editoras[idx] = editora
+                salvar_editoras(editoras)
+                return True
+    except Exception as e:
+        print(e)
+        return False
 
     
 def remover_editora(id):
-   pass
+    try:
+        editoras = carregar_editoras()
+        novas_editoras = []
+        for e in editoras:
+            if e.id != id:
+                novas_editoras.append(e)
+        return salvar_editoras(novas_editoras)
+    except Exception as e:
+        print(e)
+        return False
