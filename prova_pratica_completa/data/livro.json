@@ -1,16 +1,21 @@
 [
     {
-        "id": 3,
-        "titulo": "Livro C",
-        "autor": "Autor A",
-        "isbn": "9879876",
-        "editora_id": 3
+        "id": 1,
+        "titulo": "Livro A",
+        "isbn": "123123123",
+        "editora_id": 4,
+        "autores": [
+            1,
+            2
+        ]
     },
     {
-        "id": 4,
-        "titulo": "Livro Z",
-        "autor": "Autor Z",
-        "isbn": "87268756",
-        "editora_id": 4
+        "id": 2,
+        "titulo": "Livro B",
+        "isbn": "463573",
+        "editora_id": 3,
+        "autores": [
+            2
+        ]
     }
 ]

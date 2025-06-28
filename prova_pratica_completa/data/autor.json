@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "nome": "Leo Silva",
+        "cpf": "12312312334",
+        "email": "leo@leo.com",
+        "livros": [
+            1,
+            2
+        ]
+    },
+    {
+        "id": 2,
+        "nome": "Teste",
+        "cpf": "32321321312",
+        "email": "teste@teste.com",
+        "livros": [
+            1
+        ]
+    }
+]

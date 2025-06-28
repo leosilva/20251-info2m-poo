@@ -51,7 +51,7 @@ def adicionar_livro(livro):
         livros.append(livro)
                 
         # salva a nova lista no arquivo
-        return salvar_livros(livros)
+        return salvar_livros(livros), livro
     except Exception as e:
         print(e)
         return None

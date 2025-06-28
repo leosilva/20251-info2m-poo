@@ -3,6 +3,7 @@ from janelas.livro.janela_cadastrar_livro import JanelaCadastroLivro
 from janelas.livro.janela_buscar_livro import JanelaBuscaLivro
 from janelas.editora.janela_buscar_editora import JanelaBuscaEditora
 from janelas.editora.janela_cadastrar_editora import JanelaCadastroEditora
+from janelas.autor.janela_cadastrar_autor import JanelaCadastroAutor
 
 
 class JanelaPrincipal:
@@ -28,8 +29,13 @@ class JanelaPrincipal:
         self.menu_bar.add_cascade(label="Editoras", menu=menu_editoras)
         menu_editoras.add_command(label="Cadastrar Editora", command=self.abrir_janela_cadastro_editora)
         menu_editoras.add_command(label="Buscar Editora", command=self.abrir_janela_busca_editora)
+        
+        menu_autores = tk.Menu(self.menu_bar, tearoff=0)
+        self.menu_bar.add_cascade(label="Autores", menu=menu_autores)
+        menu_autores.add_command(label="Cadastrar Autor", command=self.abrir_janela_cadastro_autor)
 
         self.janela.mainloop()
+
 
     def centralizar_janela(self):
         largura = 350
@@ -42,30 +48,32 @@ class JanelaPrincipal:
 
         self.janela.geometry(f"{largura}x{altura}+{x}+{y}")
 
+
     def limpar_widgets(self):
         if len(self.janela.winfo_children()) > 1:
             self.janela.winfo_children()[1].destroy()
+
 
     def abrir_janela_cadastro(self):
         self.limpar_widgets()
         JanelaCadastroLivro(self.janela)
 
+
     def abrir_janela_busca_livro(self):
         self.limpar_widgets()
         JanelaBuscaLivro(self.janela)
+
         
     def abrir_janela_busca_editora(self):
         self.limpar_widgets()
         JanelaBuscaEditora(self.janela)
 
-    # def abrir_janela_atualizacao(self):
-    #     self.limpar_widgets()
-    #     JanelaAtualizarLivro(self.janela)
-
-    # def abrir_janela_remocao(self):
-    #     self.limpar_widgets()
-    #     JanelaRemoverLivro(self.janela)
         
     def abrir_janela_cadastro_editora(self):
         self.limpar_widgets()
         JanelaCadastroEditora(self.janela)
+        
+        
+    def abrir_janela_cadastro_autor(self):
+        self.limpar_widgets()
+        JanelaCadastroAutor(self.janela)

@@ -1,9 +1,9 @@
 class Livro:
-    def __init__(self, titulo, autor, isbn, editora_id, id=None):
+    def __init__(self, titulo, isbn, editora_id, autores=None, id=None):
         self.titulo = titulo
-        self.autor = autor
         self.isbn = isbn
         self.editora_id = editora_id
+        self.autores = autores
         self.id = id
                 
         
@@ -11,7 +11,7 @@ class Livro:
         return {
             'id': self.id,
             'titulo': self.titulo,
-            'autor': self.autor,
             'isbn': self.isbn,
-            'editora_id': self.editora_id
+            'editora_id': self.editora_id,
+            'autores': self.autores
         }

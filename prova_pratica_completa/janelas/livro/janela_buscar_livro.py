@@ -1,6 +1,7 @@
 import tkinter as tk
 import manipulacao_arquivos.manipulador_arquivos_livro as mal
 import manipulacao_arquivos.manipulador_arquivos_editora as mae
+import manipulacao_arquivos.manipulador_arquivos_autor as maa
 from janelas.livro.janela_atualizar_livro import JanelaAtualizarLivro
 from tkinter import messagebox
 import utils as ut
@@ -49,7 +50,7 @@ class JanelaBuscaLivro:
     
     def reset_textos_labels(self):
         self.label_titulo_resultado.config(text="Título: ")
-        self.label_autor_resultado.config(text="Autor: ")
+        self.label_autor_resultado.config(text="Autores: ")
         self.label_isbn_resultado.config(text="ISBN: ")
         self.label_editora_resultado.config(text="Editora: ")
     
@@ -62,7 +63,13 @@ class JanelaBuscaLivro:
         self.label_titulo_resultado.config(text=texto_atual)
         
         texto_atual = self.label_autor_resultado.cget("text")
-        texto_atual = texto_atual + resultado.autor
+        for id in resultado.autores:
+            autor = maa.buscar_autor_por_id(id)
+            texto_atual = texto_atual + autor.nome + ', '
+        
+        # removendo os dois ultimos caracteres, para remover o ultimo ', '
+        texto_atual = texto_atual[:-2]
+            
         self.label_autor_resultado.config(text=texto_atual)
         
         texto_atual = self.label_isbn_resultado.cget("text")
