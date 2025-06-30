@@ -17,5 +17,15 @@
         "autores": [
             2
         ]
+    },
+    {
+        "id": 3,
+        "titulo": "Livro Qualquer",
+        "isbn": "263752673567",
+        "editora_id": 3,
+        "autores": [
+            2,
+            3
+        ]
     }
 ]

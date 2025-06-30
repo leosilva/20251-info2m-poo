@@ -1,5 +1,5 @@
 class Autor:
-    def __init__(self, nome, cpf, email, livros=None, id=None):
+    def __init__(self, nome, cpf, email, livros=[], id=None):
         self.nome = nome
         self.cpf = cpf
         self.email = email
