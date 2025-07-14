@@ -1,0 +1,36 @@
+{
+    "vendas": [
+        {
+            "modelo": "Picape XLT",
+            "quantidade": 1131
+        },
+        {
+            "modelo": "SUV Turbo",
+            "quantidade": 2111
+        },
+        {
+            "modelo": "Crossover Z",
+            "quantidade": 2414
+        },
+        {
+            "modelo": "Van Max",
+            "quantidade": 1250
+        },
+        {
+            "modelo": "Hybrid One",
+            "quantidade": 1221
+        },
+        {
+            "modelo": "Sedan LX",
+            "quantidade": 1232
+        },
+        {
+            "modelo": "Hatch Eco",
+            "quantidade": 671
+        },
+        {
+            "modelo": "Coupe Sport",
+            "quantidade": 907
+        }
+    ]
+}
